@@ -10,12 +10,12 @@ And then next is , the Python script that i have written ,it has to interact wit
 using webhooks in Github, github to python integration has done 
 
 ### steps ->>>>>
-1.Understand API ---(Flask framework)
-2.JIRA setup
-3.JIRA API calls(how to make api calls in JIRA)
-4.Python Script to talk to the JIRA API
-5.Execution of the script
-6.Convert Python Script to API
-7.Deploy this Python Application to Server
-8.Github Webhook
-9.Conditional Handling (only if user comments '/jira' , you have to create an JIRA Ticket not for every comments) -> Using if condition in the JSON information
+### 1.Understand API ---(Flask framework)
+### 2.JIRA setup
+### 3.JIRA API calls(how to make api calls in JIRA)
+### 4.Python Script to talk to the JIRA API
+### 5.Execution of the script
+### 6.Convert Python Script to API
+### 7.Deploy this Python Application to Server
+### 8.Github Webhook
+### 9.Conditional Handling (only if user comments '/jira' , you have to create an JIRA Ticket not for every comments) -> Using if condition in the JSON information
