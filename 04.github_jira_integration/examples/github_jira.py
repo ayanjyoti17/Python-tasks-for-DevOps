@@ -12,53 +12,49 @@ app = Flask(__name__)
 def createJira():
 
     url = "https://jyotiayan47.atlassian.net/rest/api/3/issue"
-
-    API_TOKEN=""
-
-    auth = HTTPBasicAuth("", API_TOKEN)
+    api_token=""
+    auth = HTTPBasicAuth("", api_token)
 
     headers = {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
+    "Accept": "application/json",
+    "Content-Type": "application/json"
     }
 
     payload = json.dumps( {
-        "fields": {
+    "fields": {
         "description": {
+        "content": [
+            {
             "content": [
                 {
-                    "content": [
-                        {
-                            "text": "Order entry fails when selecting supplier.",
-                            "type": "text"
-                        }
-                    ],
-                    "type": "paragraph"
-                    }
-                ],
-            "type": "doc",
-             "version": 1
-        },
-        "project": {
-           "key": "AB"
+                "text": "My first JIRA ticket",
+                "type": "text"
+                }
+            ],
+            "type": "paragraph"
+            }
+        ],
+        "type": "doc",
+        "version": 1
         },
         "issuetype": {
-            "id": "10006"
+        "id": "10041"
         },
-        "summary": "Main order flow broken",
+        "project": {
+        "key": "AYAN"
+        },
+        "summary": "First JIRA Ticket",
     },
     "update": {}
     } )
 
-
     response = requests.request(
-        "POST",
-        url,
-        data=payload,
-        headers=headers,
-        auth=auth
+    "POST",
+    url,
+    data=payload,
+    headers=headers,
+    auth=auth
     )
-
     return json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": "))
 
 if __name__ == '__main__':
