@@ -1,8 +1,11 @@
 from flask import Flask
+
+#creating a flask app instance
 app = Flask(__name__)
 
-@app.route('/')
+#decorator
+@app.route("/")
 def hello_world():
     return 'hello, world!'
 
-app.run("0.0.0.0")
+app.run('0.0.0.0')
