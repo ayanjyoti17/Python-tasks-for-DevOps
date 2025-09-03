@@ -27,7 +27,7 @@ def createJira():
             {
             "content": [
                 {
-                "text": "My first JIRA ticket",
+                "text": "Order entry fails when selecting supplier.",
                 "type": "text"
                 }
             ],
@@ -43,7 +43,7 @@ def createJira():
         "project": {
         "key": "AYAN"
         },
-        "summary": "First JIRA Ticket",
+        "summary": "Main order flow broken",
     },
     "update": {}
     } )
